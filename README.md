@@ -65,14 +65,13 @@ llm_project_llama/
 
 1. Build the Docker image:
    ```sh
-   docker-compose build
+   docker-compose up --build
    ```
-2. Start the Docker containers:
-   ```sh
-   docker-compose up
+2. The Qdrant vector database will be running on `localhost:6333` and the Streamlit app will be accessible on `localhost:8501`.
+3. Upload the **pdf** documents, either by script or via the Jupyter notebook
+   ```bash
+   ./upload_data_qdrant.sh
    ```
-3. The Qdrant vector database will be running on `localhost:6333` and the Streamlit app will be accessible on `localhost:8501`.
-4. Upload the **pdf** documents, either by script or via the Jupyter notebook
 
 ### For local environment
 
@@ -81,9 +80,9 @@ llm_project_llama/
    streamlit run app.py
    ```
 2. Enter your queries and rate the result.
-   <img src="assets/streamlit_screenshot.png" alt="SolanaAnchor" width="500" height="300">
+   <img src="assets/streamlit_screenshot.png" alt="SolanaAnchor" width="600" height="400">
 3. Or ask for code examples
-   <img src="assets/hello_anchor.png" alt="SolanaAnchor" width="500" height="300">
+   <img src="assets/hello_anchor.png" alt="SolanaAnchor" width="600" height="600">
 
 ### LLM_Project overview
 
@@ -105,5 +104,5 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements
 
-- **Datatalksclub**: For providing the LLM - Zoomcamp and the resources to complete this project.
+- **Datatalksclub**: For providing the [LLM - Zoomcamp](https://datatalks.club/blog/guide-to-free-online-courses-at-datatalks-club.html#llm-zoomcamp) and the [resources](https://github.com/DataTalksClub/llm-zoomcamp) to complete this project.
 - **GPT-4o**: For assisting in the creation of this README and providing general information on the Anchor framework and Solana Blockchain.
