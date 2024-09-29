@@ -6,7 +6,6 @@ __pycache__/
 *.pdb
 *.egg-info/
 .venv/
-.env
 env/
 venv/
 qdrant_data
@@ -29,8 +28,20 @@ qdrant_data
 *.war
 
 # Ignore version control files
+.git/
+.gitignore
+.gitattributes
+.hg/
+.hgignore
+.svn/
+.idea/
+.vscode/
+.vagrant/
 
-
+# Ignore Docker-specific files and directories
+.dockerignore
+docker-compose.yml
+Dockerfile
 
 # Ignore node_modules (if you're using JavaScript/Node.js)
 node_modules/
@@ -45,7 +56,7 @@ yarn.lock
 
 # Ignore files related to documentation
 docs/
-
+*.md
 
 # Ignore test directories and test output
 tests/
@@ -54,5 +65,4 @@ coverage/
 *.cover
 *.coverage
 junit*.xml
-
 

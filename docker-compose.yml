@@ -1,0 +1,26 @@
+services:
+  qdrant:
+    image: qdrant/qdrant
+    container_name: qdrant
+    ports:
+      - "6333:6333"
+    volumes:
+      - ./qdrant_data:/qdrant/storage
+    networks:
+      - qdrant_network
+
+  streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streamlit
+    ports:
+      - "8501:8501"
+    depends_on:
+      - qdrant
+    networks:
+      - qdrant_network
+
+networks:
+  qdrant_network:
+    driver: bridge # This is the default Docker network driver

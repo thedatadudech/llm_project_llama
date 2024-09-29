@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "question": "What is Anchor?",
+      "answer": "Anchor is a framework for quickly building secure Solana programs."
+    },
+    {
+      "question": "What does Anchor do to make building programs easier?",
+      "answer": "Anchor handles various boilerplate code for you, such as (de)serialization of accounts and instruction data."
+    },
+    {
+      "question": "What are the components of an Anchor program?",
+      "answer": "An Anchor program consists of three parts: the program module, the Accounts structs, and the declare_id macro."
+    },
+    {
+      "question": "How are accounts validated in Anchor?",
+      "answer": "Accounts are validated through the use of an Accounts struct, which defines constraints that accounts must meet."
+    },
+    {
+      "question": "What does the #[account] attribute do in Anchor?",
+      "answer": "The #[account] attribute sets the owner of data to the ID of the crate and adds (de)serialization functions."
+    },
+    {
+      "question": "What is the purpose of declare_id in Anchor?",
+      "answer": "declare_id creates an ID field that stores the address of your program, which is used for security checks."
+    },
+    {
+      "question": "What does the mut constraint signify in an Anchor account?",
+      "answer": "The mut constraint indicates that the account should be mutable."
+    },
+    {
+      "question": "What is a PDA (Program Derived Address)?",
+      "answer": "A PDA is an address with special properties, not a public key, used for secure and unique program operations on Solana."
+    },
+    {
+      "question": "How are PDAs created?",
+      "answer": "PDAs are created by hashing a number of seeds and a program ID, and finding a bump to ensure the result is not a public key."
+    },
+    {
+      "question": "How does Anchor support PDAs?",
+      "answer": "Anchor uses PDAs to create hashmap-like structures and allows programs to sign instructions."
+    },
+    {
+      "question": "What is a context in Anchor?",
+      "answer": "A context in Anchor refers to the set of accounts and constraints passed to an instruction function."
+    },
+    {
+      "question": "How does Anchor handle cross-program invocations (CPIs)?",
+      "answer": "Anchor enables programs to call other programs by using CPIs, allowing for programmatic composition."
+    },
+    {
+      "question": "What are constraints used for in Anchor?",
+      "answer": "Constraints are used to enforce specific rules on accounts, such as ownership, signer status, or any arbitrary expression."
+    },
+    {
+      "question": "What does the Accounts struct in Anchor do?",
+      "answer": "The Accounts struct validates accounts passed to an instruction by specifying types and constraints."
+    },
+    {
+      "question": "How does Anchor handle testing?",
+      "answer": "Anchor provides built-in support for testing by running tests against local or remote validators using integration test suites."
+    },
+    {
+      "question": "What is the role of the system program in Solana?",
+      "answer": "The system program in Solana is responsible for basic operations like creating accounts and transferring lamports."
+    },
+    {
+      "question": "How does Solana handle memory?",
+      "answer": "Solana’s memory model is a monolithic heap of data, and each program has access to its portion of that heap."
+    },
+    {
+      "question": "What is the significance of the #[derive(Accounts)] macro in Anchor?",
+      "answer": "The #[derive(Accounts)] macro is used to define the set of accounts required for an instruction, along with their constraints."
+    },
+    {
+      "question": "What does the Anchor.toml file do?",
+      "answer": "The Anchor.toml file configures workspace-wide settings, such as program addresses, registry information, and test scripts."
+    },
+    {
+      "question": "How does Anchor ensure security in programs?",
+      "answer": "Anchor ensures security by validating accounts, adding constraints, and handling program addresses securely with the declare_id macro."
+    }
+  ]
+}
